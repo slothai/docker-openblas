@@ -5,7 +5,7 @@ FROM alpine:3.7
 ARG BUILD_DATE
 ARG VCS_REF
 
-ARG OPENBLAS_VERSION=0.3.0
+ARG OPENBLAS_VERSION=0.3.0.dev
 ARG OPENBLAS_COMMIT=f5959f2543399b764ee9bf6bf1874dfb7caa9fee
 
 LABEL org.label-schema.build-date=$BUILD_DATE \
@@ -13,7 +13,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
     org.label-schema.vcs-ref=$VCS_REF \
     org.label-schema.vcs-url="https://github.com/slothai/docker-openblas" \
     org.label-schema.vendor="SlothAI <https://slothai.github.io/>" \
-    org.label-schema.docker.cmd.debug="docker exec -it $CONTAINER /bin/sh" \
+    org.label-schema.docker.cmd.debug="docker exec -it slothai/openblas /bin/sh" \
     org.label-schema.schema-version="1.0"
 
 ENV OPENBLAS_VERSION=${OPENBLAS_VERSION}
